@@ -1,0 +1,52 @@
+.login-content-wrapper {
+  height: 80%;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.single-post {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+li {
+  list-style: none;
+  width: 80%;
+  margin: auto; }
+
+.posts-container {
+  background-color: #424242; }
+
+.post {
+  background-color: white; }
+
+body {
+  background-color: #424242; }
+
+.main-post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.hashtags-and-likes {
+  display: flex;
+  flex-direction: row; }
+
+.hashtags-and-likes > * {
+  width: 50%; }
+
+.jumbotron {
+  padding: 0;
+  margin-top: 0; }
+
+.navbar-default {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,32 @@
+<nav-bar></nav-bar>
+<h1>Create a post</h1>
+
+<form class="" name="postForm" ng-submit="submitData()">
+  <div class="form-group">
+    <label for="">Title</label>
+    <input type="text" class="form-control" id="" placeholder="Title" name='title' ng-model="postData.title" required>
+  </div>
+  <div class="form-group">
+    <label for="">Images</label>
+    <input type="text" class="form-control" id="" placeholder="Images" name='images' ng-model="postData.images" required>
+  </div>
+  <div class="form-group">
+    <label for="">Text</label>
+    <input type="text" class="form-control" id="" placeholder="Text" name='text' ng-model="postData.text" required>
+  </div>
+  <div class="form-group">
+    <label for="">Hastags</label>
+    <input type="text" class="form-control" id="" placeholder="Hastags" name='hashtags' ng-model="postData.hashtags" required>
+  </div>
+  <div class="form-group">
+    <label for="">For sale?</label>
+    <input type="text" class="form-control" id="" placeholder="For sale?" name='for' ng-model="postData.forSale" required>
+  </div>
+  <div class="form-group">
+    <label for="">Price</label>
+    <input type="text" class="form-control" id="" placeholder="Price" name='title' ng-model="postData.price" required>
+  </div>
+  <div class="form-group">
+    <button ng-disabled="postForm.$invalid">Submit</button>
+  </div>
+</form>

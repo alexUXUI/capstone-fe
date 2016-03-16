@@ -1,1 +1,27 @@
-<h1>this is content</h1>
+<nav-bar></nav-bar>
+
+<div class="jumbotron">
+  <h1>Trending Causes</h1>
+  <p>The most popular hastags will go here</p>
+</div>
+
+<button ng-click="getProfile()">Get profile</button>
+
+<a ui-sref="profile({{userIdentification}})">profffff</a>
+
+<ul class="posts-container">
+  <li class='post' ng-repeat="post in posts">
+    <div class="main-post-content">
+      <h2>{{post.title}}</h2>
+      <img src="{{post.image_content}}" />
+      <h3>{{post.text_content}}</h3>
+    </div>
+    <div class="hashtags-and-likes">
+      <h4>{{post.hashtag}}</h4>
+      <h5>{{post.likes}}</h5>
+    </div>
+    <p>{{post.comments}}</p>
+    <p>{{post.forsale}}</p>
+    <p>{{post.price}}</p>
+  </li>
+</ul>
