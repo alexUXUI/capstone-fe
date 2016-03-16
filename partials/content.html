@@ -5,14 +5,10 @@
   <p>The most popular hastags will go here</p>
 </div>
 
-<button ng-click="getProfile()">Get profile</button>
-
-<a ui-sref="profile({{userIdentification}})">profffff</a>
-
 <ul class="posts-container">
-  <li class='post' ng-repeat="post in posts">
+  <li class='post' ng-repeat="post in posts" data="{{post.id}}" >
     <div class="main-post-content">
-      <h2>{{post.title}}</h2>
+      <h2 ui-sref="post({id: {{post.id}}})">{{post.title}}</h2>
       <img src="{{post.image_content}}" />
       <h3>{{post.text_content}}</h3>
     </div>
@@ -22,6 +18,6 @@
     </div>
     <p>{{post.comments}}</p>
     <p>{{post.forsale}}</p>
-    <p>{{post.price}}</p>
+    <p ui-sref="shoppingcart({id: {{post.id}}})">{{post.price}}</p>
   </li>
 </ul>

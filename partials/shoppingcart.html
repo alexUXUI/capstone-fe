@@ -1,0 +1,17 @@
+<h1>This is the Shopping cart<h1>
+  <ul class="artWork-container">
+    <li>
+      <div class="main-post-content">
+        <h2 ui-sref="post({id: {{id}}})">{{title}}</h2>
+        <img src="{{image}}" />
+        <h3>{{text}}</h3>
+      </div>
+      <div class="hashtags-and-likes">
+        <h4>{{hashtag}}</h4>
+        <h5>{{likes}}</h5>
+      </div>
+      <p>{{comments}}</p>
+      <p>{{forsale}}</p>
+      <p ui-sref="shoppingcart({id: {{id}}})">{{price}}</p>
+    </li>
+  </ul>

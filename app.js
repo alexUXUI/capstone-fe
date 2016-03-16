@@ -44,11 +44,21 @@ var app = angular.module('capstone', ["ui.router", 'ngStorage'])
       url: '/feedback'
     }).state('postview', {
       templateUrl: 'partials/postview.html',
+      params: { data: null, id: null },
       controller: "PostViewController",
       url: '/postview/:id'
-    })
+    }).state('post', {
+      // params: { data: null, id: null },
+      templateUrl: 'partials/post.html',
+      controller: "singlepost",
+      url: '/post?id'
+    }).state('shoppingcart', {
+      params: { data: null, id: null },
+      templateUrl: 'partials/shoppingcart.html',
+      controller: "shoppingcart",
+      url: '/shoppingcart?id'
+    });
   });
-
 
   app.directive('navBar', function(){
     return {

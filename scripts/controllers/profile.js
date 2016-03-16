@@ -1,18 +1,18 @@
 app.controller('ProfileController', function($scope, $http, $localStorage, $state){
 
-console.log('this is the user id, specifically: ', $localStorage.userIdentification);
-console.log('this is user id', btoa($localStorage.token));
-
     var id = $localStorage.userIdentification;
     var idstring = id.toString();
-    console.log('hitting the right route');
-    console.log('using the right value! ', id);
-
     $http.get('http://localhost:3000/profile/' + id).then(function(data){
-      console.log(data);
-      $scope.email = data.data.user.email;
-      $scope.profileImage = data.data.user.user_image;
-    })
 
+    // user details
+    $scope.profileImage = data.data.data.user.photo;
+    $scope.email = data.data.data.user.email;
+    $scope.first = data.data.data.user.first;
+    $scope.last = data.data.data.user.last;
 
+    // user posts
+    $scope.posts = data.data.data.userposts;
+    console.log('posts::', $scope.posts);
+
+  })
 })
