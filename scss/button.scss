@@ -1,0 +1,70 @@
+
+.btn-container {
+}
+.btn-container .btn {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 275px;
+  margin-right: 15px;
+  text-decoration: none;
+  padding: 0px 0px 0px 0px;
+  height: 50px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition-property: color;
+  -webkit-transition-property: color;
+  transition-duration: 0.2s;
+  webkit-transition-duration: 0.2s;
+}
+.btn .slider {
+  background: black;
+  width: 800px;
+  height: 150px;
+  position: absolute;
+  display: block;
+  z-index: 0;
+  transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  left: -850px;
+  -webkit-transition: transform 0.3;
+  transition: transform 0.3;
+  transition-duration: .2s;
+  -webkit-transition-duration: .5s;
+}
+.btn .label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  color:black;
+  font-size: 1.5em;
+  transition-property: color;
+  -webkit-transition-property: color;
+  transition-duration: 0.2s;
+  font-family: 'Kaushan Script', cursive;
+
+}
+.label:hover{
+  color:white;
+}
+.btn:hover > .slider {
+  transform: translateX(800px);
+  -webkit-transform: translateX(800px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  transition-duration: .8s;
+  -webkit-transition-duration: .8s;
+}
+.btn:hover {
+  color: #e79252;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}

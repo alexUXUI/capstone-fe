@@ -1,4 +1,4 @@
-var app = angular.module('capstone', ["ui.router", 'ngStorage'])
+var app = angular.module('capstone', ["ui.router", 'ngStorage', ])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider){
     $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function ($q, $location, $localStorage) {
        return {
@@ -57,6 +57,21 @@ var app = angular.module('capstone', ["ui.router", 'ngStorage'])
       templateUrl: 'partials/shoppingcart.html',
       controller: "shoppingcart",
       url: '/shoppingcart?id'
+    }).state('paypal', {
+      params: { data: null, id: null },
+      templateUrl: 'partials/paypal.html',
+      controller: "paypal",
+      url: '/paypal'
+    }).state('create', {
+      params: { data: null, id: null },
+      templateUrl: 'partials/paypal.html',
+      controller: "paypal",
+      url: '/paypal/create'
+    }).state('creditcard', {
+      params: { data: null, id: null },
+      templateUrl: 'partials/creditcard.html',
+      controller: "creditcard",
+      url: '/creditcard'
     });
   });
 

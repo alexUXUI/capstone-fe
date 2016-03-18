@@ -1,0 +1,27 @@
+.brandOne {
+  font-size: 10em;
+  font-family: 'Kaushan Script', cursive;
+  line-height: .3em;
+  color: #FF333A;
+}
+
+.brandTwo {
+  font-size: 4.5em;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 10px;
+  margin-left: 20px;
+}
+
+.login-content-wrapper {
+  height:80%;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag-line {
+  font-size: 1.6em;
+}

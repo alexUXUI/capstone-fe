@@ -13,5 +13,14 @@
       <p>{{comments}}</p>
       <p>{{forsale}}</p>
       <p ui-sref="shoppingcart({id: {{id}}})">{{price}}</p>
+      <div class="btn-group-vertical btn-group-sm">
+        <button type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
+      </div>
     </li>
   </ul>
+
+<div class='cart'>
+  <h1>Your shopping cart</h1>
+  {{cart}}
+  <button ui-sref="paypal()">Checkout</button>
+</div>

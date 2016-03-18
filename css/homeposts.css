@@ -1,0 +1,36 @@
+.posts-container {
+  background-color: #424242; }
+
+.post {
+  background-color: white;
+  width: 600px; }
+
+.post-image {
+  height: 100%;
+  width: 100%; }
+
+.post-image-container {
+  height: 500px;
+  width: 500px; }
+
+.post-text {
+  padding-top: 4%;
+  padding-left: 9%;
+  padding-right: 9%;
+  font-size: 1.25em; }
+
+.main-post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+
+.hashtags-and-likes {
+  display: flex;
+  flex-direction: row; }
+
+.hashtags-and-likes > * {
+  width: 50%; }
+
+/*# sourceMappingURL=homeposts.css.map */

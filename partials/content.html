@@ -1,16 +1,18 @@
 <nav-bar></nav-bar>
 
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1>Trending Causes</h1>
   <p>The most popular hastags will go here</p>
-</div>
+</div> -->
 
 <ul class="posts-container">
   <li class='post' ng-repeat="post in posts" data="{{post.id}}" >
     <div class="main-post-content">
       <h2 ui-sref="post({id: {{post.id}}})">{{post.title}}</h2>
-      <img src="{{post.image_content}}" />
-      <h3>{{post.text_content}}</h3>
+      <div class="post-image-container">
+        <img src="{{post.image_content}}" class='post-image' />
+      </div>
+      <p class="post-text">{{post.text_content}}</p>
     </div>
     <div class="hashtags-and-likes">
       <h4>{{post.hashtag}}</h4>

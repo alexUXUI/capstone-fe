@@ -1,0 +1,20 @@
+<div class="demo-container">
+    <div class="card-wrapper"></div>
+
+    <div class="form-container active">
+        <form action="">
+            <input placeholder="Card number" type="text" name="number">
+            <input placeholder="Full name" type="text" name="name">
+            <input placeholder="MM/YY" type="text" name="expiry">
+            <input placeholder="CVC" type="text" name="cvc">
+        </form>
+    </div>
+</div>
+
+<script src="../lib/js/card.js"></script>
+<script>
+    new Card({
+        form: document.querySelector('form'),
+        container: '.card-wrapper'
+    });
+</script>

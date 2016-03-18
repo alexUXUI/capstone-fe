@@ -1,3 +1,58 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+.posts-container {
+  background-color: #424242; }
+
+.post {
+  background-color: white;
+  width: 600px; }
+
+.post-image {
+  height: 100%;
+  width: 100%; }
+
+.post-image-container {
+  height: 500px;
+  width: 500px; }
+
+.post-text {
+  padding-top: 4%;
+  padding-left: 9%;
+  padding-right: 9%;
+  font-size: 1.25em; }
+
+.main-post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+
+.hashtags-and-likes {
+  display: flex;
+  flex-direction: row; }
+
+.hashtags-and-likes > * {
+  width: 50%; }
+
+.single-post {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.brandOne {
+  font-size: 10em;
+  font-family: 'Kaushan Script', cursive;
+  line-height: .3em;
+  color: #FF333A; }
+
+.brandTwo {
+  font-size: 4.5em;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 10px;
+  margin-left: 20px; }
+
 .login-content-wrapper {
   height: 80%;
   background-color: white;
@@ -7,46 +62,104 @@
   align-items: center;
   justify-content: center; }
 
-.single-post {
-  margin: auto;
+.tag-line {
+  font-size: 1.6em; }
+
+.btn-container .btn {
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  width: 275px;
+  margin-right: 15px;
+  text-decoration: none;
+  padding: 0px 0px 0px 0px;
+  height: 50px;
+  border: 1px solid black;
+  color: black;
+  border-radius: 2px;
+  margin: 0 auto;
+  color: #fff;
   display: flex;
   flex-direction: column;
+  transition-property: color;
+  -webkit-transition-property: color;
+  transition-duration: 0.2s;
+  webkit-transition-duration: 0.2s; }
+
+.btn .slider {
+  background: black;
+  width: 800px;
+  height: 150px;
+  position: absolute;
+  display: block;
+  z-index: 0;
+  transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  left: -850px;
+  -webkit-transition: transform 0.3;
+  transition: transform 0.3;
+  transition-duration: .2s;
+  -webkit-transition-duration: .5s; }
+
+.btn .label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: center; }
+  z-index: 1;
+  color: black;
+  font-size: 1.5em;
+  transition-property: color;
+  -webkit-transition-property: color;
+  transition-duration: 0.2s;
+  font-family: 'Kaushan Script', cursive; }
+
+.label:hover {
+  color: white; }
+
+.btn:hover > .slider {
+  transform: translateX(800px);
+  -webkit-transform: translateX(800px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  transition-duration: .8s;
+  -webkit-transition-duration: .8s; }
+
+.btn:hover {
+  color: #e79252;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s; }
+
+.navi {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  font-size: 1.5em; }
+
+a {
+  padding: 10px; }
+
+.navi-wrapper {
+  width: 100%;
+  margin: auto; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  font-family: 'Playfair Display', serif; }
 
 li {
   list-style: none;
   width: 80%;
   margin: auto; }
 
-.posts-container {
-  background-color: #424242; }
-
-.post {
-  background-color: white; }
-
-body {
-  background-color: #424242; }
-
-.main-post-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-
-.hashtags-and-likes {
-  display: flex;
-  flex-direction: row; }
-
-.hashtags-and-likes > * {
-  width: 50%; }
-
-.jumbotron {
-  padding: 0;
-  margin-top: 0; }
-
-.navbar-default {
-  margin: 0;
-  padding: 0; }
+.brand-break {
+  color: black; }
 
 /*# sourceMappingURL=main.css.map */
