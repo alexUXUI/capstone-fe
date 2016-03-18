@@ -1,18 +1,17 @@
 <nav-bar></nav-bar>
 
-<!-- <div class="jumbotron">
-  <h1>Trending Causes</h1>
-  <p>The most popular hastags will go here</p>
-</div> -->
-
 <ul class="posts-container">
   <li class='post' ng-repeat="post in posts" data="{{post.id}}" >
     <div class="main-post-content">
-      <h2 ui-sref="post({id: {{post.id}}})">{{post.title}}</h2>
+      <a ui-sref="post({id: {{post.post_number}}})">{{post.post_title}}</a>
+      <a ui-sref="profile({id: {{post.user_id}}})">
+        <img src="{{post.user_photo}}" />
+      </a>
       <div class="post-image-container">
-        <img src="{{post.image_content}}" class='post-image' />
+        <img src="{{post.photo_url}}" class='post-image' />
       </div>
-      <p class="post-text">{{post.text_content}}</p>
+      <p class="post-text">{{post.posts_body}}</p>
+      <p class="post-text">{{post.post_created_at}}</p>
     </div>
     <div class="hashtags-and-likes">
       <h4>{{post.hashtag}}</h4>
@@ -20,6 +19,8 @@
     </div>
     <p>{{post.comments}}</p>
     <p>{{post.forsale}}</p>
-    <p ui-sref="shoppingcart({id: {{post.id}}})">{{post.price}}</p>
+    <p>post number {{post.post_number}}</p>
+    <p>user id {{post.user_id}}</p>
+    <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">{{post.price}}</a></h2>
   </li>
 </ul>

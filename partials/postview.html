@@ -1,12 +1,13 @@
 <nav-bar></nav-bar>
-
 <div class="single-post">
   <h1>Your post</h1>
   <h1>{{title}}</h1>
-  <img src='{{images}}' />
+  <a ui-sref="profile({{user_id}})"><img src="{{userPhoto}}" /></a>
+  <p ui-sref="shoppingcart({{post_number}})"><img src='{{image_content}}' /></p>
   <h2>{{text}}</h2>
   <h3>{{likes}}</h3>
   <h4>{{forsale}}</h4>
   <h5>{{price}}</h5>
   <h6>{{hashtags}}</h6>
+  <h6>{{created_at}}</h6>
 </div>

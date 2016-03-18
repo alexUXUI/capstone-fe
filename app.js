@@ -31,9 +31,10 @@ var app = angular.module('capstone', ["ui.router", 'ngStorage', ])
       controller: "ValidatingController",
       url: '/validating/:token'
     }).state('profile', {
+      params: { data: null, id: null },
       templateUrl: 'partials/profile.html',
       controller: "ProfileController",
-      url: '/profile/:id'
+      url: '/profile?id'
     }).state('createpost', {
       templateUrl: 'partials/createpost.html',
       controller: "CreatePostController",
@@ -49,7 +50,7 @@ var app = angular.module('capstone', ["ui.router", 'ngStorage', ])
       url: '/postview/:id'
     }).state('post', {
       // params: { data: null, id: null },
-      templateUrl: 'partials/post.html',
+      templateUrl: 'partials/postview.html',
       controller: "singlepost",
       url: '/post?id'
     }).state('shoppingcart', {
