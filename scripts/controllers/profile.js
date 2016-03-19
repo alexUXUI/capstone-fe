@@ -1,6 +1,4 @@
 app.controller('ProfileController', function($scope, $http, $localStorage, $state){
-    
-
     $http.get('http://localhost:3000/profile/' + $state.params.id).then(function(data){
     console.log(data);
     // user details

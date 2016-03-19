@@ -1,26 +1,108 @@
 <nav-bar></nav-bar>
 
+<form>
+   <input type="text" placeholder="text search" ng-model="search">
+ </form>
+
+ <div class='trending-hashtags'>
+   <ul>
+     <li class='trending' ng-repeat="hashtag in trending">{{hashtag}}</li>
+   </ul>
+ </div>
+
 <ul class="posts-container">
-  <li class='post' ng-repeat="post in posts" data="{{post.id}}" >
-    <div class="main-post-content">
-      <a ui-sref="post({id: {{post.post_number}}})">{{post.post_title}}</a>
-      <a ui-sref="profile({id: {{post.user_id}}})">
-        <img src="{{post.user_photo}}" />
-      </a>
-      <div class="post-image-container">
-        <img src="{{post.photo_url}}" class='post-image' />
+
+<!-- start post -->
+
+  <li class='post' ng-repeat="post in posts | filter:search" data="{{post.id}}" >
+
+    <!-- Top section -->
+
+    <div class="post-top-section">
+
+      <!-- left side -->
+
+      <div class="title-date">
+        <h3 ui-sref="post({id: {{post.post_number}}})">{{post.post_title}}</h3>
+        <p>{{post.post_created_at}}</p>
       </div>
-      <p class="post-text">{{post.posts_body}}</p>
-      <p class="post-text">{{post.post_created_at}}</p>
+
+      <!-- Right side -->
+
+      <div class="userimage">
+        <a ui-sref="profile({id: {{post.user_id}}})">
+          <img class="user_image" src="{{post.user_photo}}" />
+        </a>
+      </div>
     </div>
-    <div class="hashtags-and-likes">
+
+    <!-- Image container -->
+
+    <div class="post-image-container">
+      <img src="{{post.photo_url}}" class='post-image' />
+    </div>
+
+    <!-- hashtags -->
+
+    <div class="hashtags">
       <h4>{{post.hashtag}}</h4>
-      <h5>{{post.likes}}</h5>
     </div>
-    <p>{{post.comments}}</p>
-    <p>{{post.forsale}}</p>
-    <p>post number {{post.post_number}}</p>
-    <p>user id {{post.user_id}}</p>
-    <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">{{post.price}}</a></h2>
+
+    <!-- text -->
+
+    <div class="post-text-container">
+      <p class="post-text">{{post.posts_body}}</p>
+    </div>
+
+    <div class="post-shop-comment-heart">
+
+      <!-- shop -->
+
+      <div class="post-shop">
+        <i class="fa fa-shopping-cart fa-4x"></i>
+        <p>{{post.forsale}}</p>
+        <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">${{post.price}}</a></h2>
+      </div>
+
+      <!-- comments -->
+
+      <div class="post-comment">
+        <form name='comment' ng-submit="addComment()">
+          <input ng-model="comment" type="input" name="text" value=""></br>
+          <input type="submit" value="Submit">
+        </form>
+        <p>{{comment}}</p>
+      </div>
+
+      <!-- hearts -->
+
+      <div class="post-heart">
+        <div class="init-wrap" ng-init="init()">
+          <i class="fa fa-heart-o active" ng-if="status == true" ng-click="changeStatus(post.post_number);"></i>
+          <i class="fa fa-heart inactive" ng-if="status == false" ng-click="changeStatus(post.post_number);"></i>
+          {{post.likes}}
+        </div>
+
+        <form class="" method="post" ng-submit="likePost(post.post_number)" ng-model()>
+          <input ng-model="" type="submit" name="name" value="like this post">
+        </form>
+      </div>
+
+    </div>
+
+
+    <!-- end three seciton -->
+
   </li>
+
+  <!-- end posts -->
+
 </ul>
+
+
+<script>
+$('.hearts').click(function(){
+    $(this).next('ul').slideToggle('500');
+    $(this).find('i').toggleClass('fa fa-heart-o icon-4x fa fa-heart icon-4x')
+});
+</script>

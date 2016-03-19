@@ -49,8 +49,7 @@
   transition-property: color;
   -webkit-transition-property: color;
   transition-duration: 0.2s;
-  font-family: 'Kaushan Script', cursive;
-
+  width:100%
 }
 .label:hover{
   color:white;
@@ -63,8 +62,8 @@
   transition-duration: .8s;
   -webkit-transition-duration: .8s;
 }
-.btn:hover {
-  color: #e79252;
+.btn .label:hover {
+  color: white;
   transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s;
 }

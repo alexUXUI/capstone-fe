@@ -1,3 +1,24 @@
+.create-post {
+  margin-top: 5%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 600px;
+  padding: 5%;
+  -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75); }
 
+.create-post .input {
+  width: 100%; }
+
+.call-to-create {
+  text-align: center; }
+
+.submit-post {
+  background-color: #FF333A; }
 
 /*# sourceMappingURL=createpost.css.map */

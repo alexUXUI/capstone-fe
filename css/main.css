@@ -1,10 +1,61 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+.create-post {
+  margin-top: 5%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 600px;
+  padding: 5%;
+  -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75); }
+
+.create-post .input {
+  width: 100%; }
+
+.call-to-create {
+  text-align: center; }
+
+.submit-post {
+  background-color: #FF333A; }
+
+.post-top-section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  margin-top: 5%; }
+
+.post-top-section .title-date {
+  width: 60%;
+  padding-left: 8%; }
+
+.post-top-section .userimage {
+  width: 40%;
+  padding-top: 4%;
+  padding-right: 7%;
+  text-align: right; }
+
+.user_image {
+  border-radius: 50%; }
+
 .posts-container {
-  background-color: #424242; }
+  background-color: white; }
 
 .post {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
-  width: 600px; }
+  width: 600px;
+  -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75); }
 
 .post-image {
   height: 100%;
@@ -20,19 +71,59 @@
   padding-right: 9%;
   font-size: 1.25em; }
 
-.main-post-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%; }
-
-.hashtags-and-likes {
+.hashtags {
   display: flex;
   flex-direction: row; }
 
 .hashtags-and-likes > * {
   width: 50%; }
+
+.active, .inactive {
+  font-size: 40px;
+  cursor: pointer; }
+
+.active, .inactive {
+  font-size: 40px;
+  cursor: pointer; }
+
+i.active {
+  color: #ccc; }
+
+i.inactive {
+  color: #FF333A; }
+
+.post-shop-comment-heart {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+
+.post-shop {
+  padding: 0;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.post-comment {
+  padding: 0;
+  width: 33%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.post-heart {
+  padding: 0;
+  width: 33%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.init-wrap {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  margin-left: 60%; }
 
 .single-post {
   margin: auto;
@@ -40,6 +131,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+.lading-page-canon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.img-bg {
+  background-image: url("../images/rebel.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -999;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  background-blend-mode: multiply; }
+
+.img-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  opacity: .9;
+  z-index: -1; }
 
 .brandOne {
   font-size: 10em;
@@ -54,16 +173,26 @@
   margin-left: 20px; }
 
 .login-content-wrapper {
+  position: inherit;
+  z-index: 100;
   height: 80%;
   background-color: white;
-  width: 100%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75); }
 
 .tag-line {
   font-size: 1.6em; }
+
+svg {
+  height: 75px;
+  width: 75px; }
 
 .btn-container .btn {
   text-align: center;
@@ -113,7 +242,7 @@
   transition-property: color;
   -webkit-transition-property: color;
   transition-duration: 0.2s;
-  font-family: 'Kaushan Script', cursive; }
+  width: 100%; }
 
 .label:hover {
   color: white; }
@@ -126,8 +255,8 @@
   transition-duration: .8s;
   -webkit-transition-duration: .8s; }
 
-.btn:hover {
-  color: #e79252;
+.btn .label:hover {
+  color: white;
   transition-duration: 0.2s;
   -webkit-transition-duration: 0.2s; }
 
