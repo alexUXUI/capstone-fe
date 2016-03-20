@@ -1,5 +1,5 @@
 {
-  "firebase": "angular-reddit",
+  "firebase": "rebelmarkets",
   "public": ".",
   "ignore": [
     "firebase.json",

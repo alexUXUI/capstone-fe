@@ -22,6 +22,72 @@
 .submit-post {
   background-color: #FF333A; }
 
+.content-page-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; }
+
+.content-page-nav {
+  width: 15%; }
+
+.content-page-posts {
+  width: 55%;
+  background-color: white; }
+
+.content-page-hashtags {
+  width: 30%;
+  padding-top: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; }
+
+.search-form {
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px; }
+
+.rich-search {
+  font-size: 1.5em;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-bottom: 2px solid black;
+  width: 80%;
+  height: 55px;
+  transition: border-bottom .1s, background-color .5s ease; }
+
+.fa {
+  width: 40px; }
+
+.call-to-scroll {
+  text-align: center;
+  color: #ccc;
+  z-index: -1; }
+
+.rich-search:focus {
+  outline: none;
+  border-bottom: 2px solid #FF333A;
+  background-color: #fafafa;
+  color: black; }
+
+.trending-hashtags {
+  margin-top: 100px;
+  background-color: #fefefe;
+  text-align: center; }
+  .trending-hashtags .trending {
+    text-align: left;
+    font-size: 1.5em; }
+
 .post-top-section {
   display: flex;
   flex-direction: row;
@@ -43,7 +109,12 @@
   border-radius: 50%; }
 
 .posts-container {
-  background-color: white; }
+  width: 750px;
+  margin: auto;
+  margin-top: 70px; }
+
+hr {
+  width: 80%; }
 
 .post {
   margin-top: 5%;
@@ -262,26 +333,43 @@ svg {
 
 .navi {
   display: flex;
-  flex-direction: row;
-  height: 70px;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  font-size: 1.5em; }
-
-a {
-  padding: 10px; }
+  flex-direction: column;
+  height: 100%;
+  align-items: stretch;
+  margin-left: 0;
+  font-size: 1.5em;
+  z-index: 0;
+  position: fixed;
+  padding-top: 50px; }
 
 .navi-wrapper {
-  width: 100%;
-  margin: auto; }
+  position: fixed; }
+
+.brand-one-mini {
+  margin-top: 50px;
+  font-size: 4.5em;
+  font-family: 'Kaushan Script', cursive;
+  line-height: .3em;
+  color: #FF333A;
+  margin-left: 40px; }
+
+.brand-two-mini {
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 10px;
+  margin-left: 40px; }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #fefefe;
   font-family: 'Roboto Condensed', sans-serif; }
+
+a {
+  color: black; }
+
+a:hover {
+  color: #FF333A; }
 
 li {
   list-style: none;

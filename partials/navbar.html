@@ -1,11 +1,17 @@
 <nav class="">
   <div class='navi-wrapper'>
+  <a href='/#/'><h1 class='brand-one-mini'>Rebel</h1>
+    <h1 class='brand-two-mini'>Markets</h1></a>
     <ul class="navi">
-      <a href="#">Rebel Markets</a>
-      <a href="/#/content">Home</a>
-      <a href="/#/createpost">Create Post</a>
-      <a href="/#/shoppingcart">shopping cart</a>
-      <a ui-sref="profile({id: {{userId}}})">Profile</a>
+      <a href="/#/content"><i class="fa fa-home">&nbsp;|&nbsp;</i>Home</a>
+      <hr>
+      <a href="/#/createpost"><i class="fa fa-pencil-square-o">&nbsp;|&nbsp;</i>Create Post</a>
+      <hr>
+      <a href="/#/shoppingcart"><i class="fa fa-shopping-cart">&nbsp;|&nbsp;</i>shopping cart</a>
+      <hr>
+      <a ui-sref="profile({id: {{userId}}})"><i class="fa fa-user">&nbsp;|&nbsp;</i>Profile</a>
+      <hr>
+      <a href="#">Log Out</a>
     </ul>
   </div>
 </nav>

@@ -1,19 +1,24 @@
 app.controller('ContentController', function($scope, $http, $state, $localStorage){
 
   $scope.userId = $localStorage.userIdentification;
-  
+
   $http.get('http://localhost:3000/allposts').then(function(data){
     $scope.posts = data.data.data;
     $scope.id = data.data.id;
     $scope.post_id = data.data.user_id
     $state.go('content', data)
-    $scope.init = function(){
-    $scope.status = true;
-    }
-    $scope.changeStatus = function(id){
-      $scope.status = !$scope.status;
-      console.log(id);
-    }
+  })
+
+  $scope.init = function(){
+    $scope.post.status = false;
+  }
+  $scope.changeStatus = function(post){
+    post.status = !post.status;
+    console.log(id);
+  }
+
+  $http.get('http://localhost:3000/getusers').then(function(data){
+    console.log('heres the users you wanted: ', data);
   })
 
   $http.get('http://localhost:3000/trending/hastags').then(function(data){
@@ -28,10 +33,6 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
       }
       console.log(blankArray);
     }
-    blankArray.forEach(function(value, index){
-      if(value = value[index-1]){
-      }
-    })
     $scope.trending = blankArray;
   })
 

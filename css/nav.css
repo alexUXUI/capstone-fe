@@ -1,18 +1,29 @@
 .navi {
   display: flex;
-  flex-direction: row;
-  height: 70px;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  font-size: 1.5em; }
-
-a {
-  padding: 10px; }
+  flex-direction: column;
+  height: 100%;
+  align-items: stretch;
+  margin-left: 0;
+  font-size: 1.5em;
+  z-index: 0;
+  position: fixed;
+  padding-top: 50px; }
 
 .navi-wrapper {
-  width: 100%;
-  margin: auto; }
+  position: fixed; }
+
+.brand-one-mini {
+  margin-top: 50px;
+  font-size: 4.5em;
+  font-family: 'Kaushan Script', cursive;
+  line-height: .3em;
+  color: #FF333A;
+  margin-left: 40px; }
+
+.brand-two-mini {
+  font-size: 2em;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 10px;
+  margin-left: 40px; }
 
 /*# sourceMappingURL=nav.css.map */
