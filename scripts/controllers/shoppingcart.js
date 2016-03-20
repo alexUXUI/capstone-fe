@@ -1,16 +1,16 @@
 app.controller('shoppingcart', function($scope, $http, $state, $localStorage){
-  $scope.tax = 0.07;
+
   $scope.id = $state.params.id
-  // $http.get('http://localhost:3000/shopping/' + $state.params.id).then(function(data){
-  //   console.log(data.data.data);
-  //   var artObject = data.data.data;
-  //   artObject.text = data.data.data.text_content;
-  //   artObject.image = data.data.data.image_content;
-  //   artObject.dateCreated = data.data.data.created_at;
-  //   artObject.quantity;
-  //   $scope.artObject = artObject;
-  //   console.log('art object', $scope.artObject);
-  // // })
+  $http.get('http://localhost:3000/shopping/' + $state.params.id).then(function(data){
+    console.log(data.data.data);
+    var artObject = data.data.data;
+    artObject.text = data.data.data.text_content;
+    artObject.image = data.data.data.image_content;
+    artObject.dateCreated = data.data.data.created_at;
+    artObject.quantity;
+    $scope.artObject = artObject;
+    console.log('art object', $scope.artObject);
+  })
   // $http.get('http://localhost:3000/allposts').then(function(data){
   //   $scope.posts = data.data.data;
   //   console.log('heres the posts: ', $scope.posts);
@@ -18,6 +18,7 @@ app.controller('shoppingcart', function($scope, $http, $state, $localStorage){
   //   $scope.post_id = data.data.user_id
   //   // $state.go('content', data)
   // })
+  $scope.tax = 0.07;
   $scope.addToCart = function(item){
     $scope.cart.subtotal = item.price * item.quantity;
     $scope.cart.total = null;
@@ -66,6 +67,6 @@ app.controller('shoppingcart', function($scope, $http, $state, $localStorage){
     return artObject.product_number = $scope.product_number;
   }
   $scope.checkout = function(){
-    $state.go('paypal', data.data.data)
+    $state.go('paypal', $scop.cart)
   }
 })

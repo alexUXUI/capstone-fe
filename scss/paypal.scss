@@ -1,0 +1,47 @@
+.demo-container {
+  padding: 15%;
+}
+
+
+.card-input {
+  background-color: white;
+  font-size: .75em;
+  font-weight: lighter;
+  z-index: 1000;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  padding: 5%;
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    .submit-payment {
+      border: none;
+      background-color: black;
+      color:white
+    }
+    input {
+      font-size: .75em;
+      text-align: center;
+      margin:auto;
+      border: none;
+      border-bottom: 2px solid black;
+      width:40%;
+      height: 40px;
+      transition: border-bottom .1s, background-color .5s ease;
+    }
+    input:focus {
+      outline: none;
+      border-bottom: 2px solid #FF333A;
+      background-color: rgb(250,250,250);
+      color:black;
+    }
+
+    .full-row {
+      width: 100%;
+    }
+  }
+}

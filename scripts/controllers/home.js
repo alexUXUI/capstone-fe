@@ -18,10 +18,17 @@ app.controller('HomeController', function($scope, $http, $state, $localStorage){
 
   $scope.addToCart = function(item){
     $scope.cart.push(item)
-    console.log($scope.cart);
+    $scope.cart = $localStorage.finalCart;
+    console.log('CART, COMING FROM HOME CONTROLLER, ' , $scope.cart);
   }
 
   $scope.checkout = function(){
     $state.go('paypal', data.data.data)
   }
+
+
+
+
+
+
 })

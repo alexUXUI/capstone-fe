@@ -1,7 +1,7 @@
 
-  app.controller('paypal', function($scope, $http, $state){
+  app.controller('paypal', function($scope, $http, $state, $localStorage){
     console.log('hello from pay pal controller');
-    $scope.data = {}
+
 
     $scope.processInfo = function(){
       console.log('process being called');
@@ -10,7 +10,5 @@
         $state.go('feedback', data)
       })
     }
-
-    console.log('this is scope');
-
+    console.log('this is scope', $scope.cart);
   })
