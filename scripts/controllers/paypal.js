@@ -1,5 +1,5 @@
 
-  app.controller('paypal', function($scope, $http){
+  app.controller('paypal', function($scope, $http, $state){
     console.log('hello from pay pal controller');
     $scope.data = {}
 
