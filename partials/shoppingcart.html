@@ -1,28 +1,156 @@
-<nav-bar></nav-bar>
+<div class="content-page-wrapper">
+  <!-- section 1 -->
+  <div class='content-page-nav'>
+    <nav-bar></nav-bar>
+  </div>
+  <!-- section 2 -->
+  <div class='content-page-posts'>
+    <h1>This is the Shopping cart<h1>
+    <ul class="artWork-container">
+      <li class='post' >
+        <div class="main-post-content">
+          <h2 ui-sref="post({id: {{artObject.id}}})">{{artObject.title}}</h2>
+            <div class="post-image-container">
+              <img src="{{artObject.photo_url}}" class='post-image' />
+            </div>
+            <h3>{{artObject.text}}</h3>
+        </div>
+        <div class="hashtags-and-likes">
+          <h4>{{artObject.hashtag}}</h4>
+          <input type="number" name="name" ng-model="artObject.quantity" placeholder="quantity">
+          <h5>{{artObject.likes}}</h5>
+        </div>
+        <p>{{artObject.comments}}</p>
+        <p>{{artObject.forsale}}</p>
+        <p ui-sref="shoppingcart({id: {{artObject.id}}})">{{artObject.price}}</p>
+        <div class="btn-group-vertical btn-group-sm">
+          <button type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
+        </div>
+      </li>
+    </ul>
 
-<h1>This is the Shopping cart<h1>
-  <ul class="artWork-container">
-    <li>
-      <div class="main-post-content">
-        <h2 ui-sref="post({id: {{id}}})">{{title}}</h2>
-        <img src="{{image}}" />
-        <h3>{{text}}</h3>
-      </div>
-      <div class="hashtags-and-likes">
-        <h4>{{hashtag}}</h4>
-        <h5>{{likes}}</h5>
-      </div>
-      <p>{{comments}}</p>
-      <p>{{forsale}}</p>
-      <p ui-sref="shoppingcart({id: {{id}}})">{{price}}</p>
-      <div class="btn-group-vertical btn-group-sm">
-        <button type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
-      </div>
-    </li>
-  </ul>
 
-<div class='cart'>
-  <h1>Your shopping cart</h1>
-  {{cart}}
-  <button ui-sref="paypal()">Checkout</button>
-</div>
+<!-- Start of section 2 -->
+<!-- <ul class="posts-container">
+<!-- start post -->
+  <!-- <li class='post' >
+    <!-- Top section -->
+    <!-- <div class="post-top-section"> -->
+      <!-- left side -->
+      <!-- <div class="title-date">
+        <h3 ui-sref="post({id: {{post.post_number}}})">{{artObject.title}}</h3>
+        <p>{{reated_at}}</p>
+      </div> -->
+      <!-- Right side -->
+      <!-- <div class="userimage">
+        <a ui-sref="profile({id: {{post.user_id}}})">
+          <img class="user_image" src="{{user_photo}}" />
+        </a>
+      </div>
+    </div> -->
+    <!-- Image container -->
+    <!-- <div class="post-image-container">
+      <img src="{{artObject.photo_url}}" class='post-image' />
+    </div> -->
+    <!-- hashtags -->
+    <!-- <div class="hashtags">
+      <h4>{{hashtag}}</h4>
+    </div> -->
+    <!-- text -->
+    <!-- <div class="post-text-container">
+      <p class="post-text">{{text}}</p>
+    </div>
+    <div class="post-shop-comment-heart"> -->
+      <!-- shop -->
+      <!-- <div class="post-shop">
+        <i class="fa fa-shopping-cart fa-4x"></i>
+        <p>{{forsale}}</p>
+        <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">${{price}}</a></h2>
+      </div> -->
+      <!-- hearts -->
+      <!-- <div class="post-heart">
+        <div class="init-wrap" ng-init="init()">
+          <i class="fa fa-heart-o active" ng-if="post.status" ng-click="post.status = !post.status;"></i>
+          <i class="fa fa-heart inactive" ng-if="!post.status" ng-click="post.status = !post.status;"></i>
+          {{post.likes}}
+          <form class="" method="post" ng-submit="likePost(post.post_number)" ng-model()>
+            <input ng-model="" type="submit" name="name" value="like this post">
+          </form>
+        </div>
+      </div>
+    </div> -->
+    <!-- end post bottom seciton -->
+  <!-- </li> -->
+  <!-- end posts -->
+<!-- </ul>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--end of section 2 -->
+  </div>
+  <!-- section 3 -->
+  <div class='content-page-hashtags'>
+    <div class="content-right">
+        <!--print to screen -->
+        <div class='cart'>
+          <h1>Your shopping cart</h1>
+          <div class='cart'>
+            <ul>
+              <li ng-repeat="item in cart track by $index">
+                <ul>
+                  <li>
+                    {{item.title}}
+                  </li>
+                  <li>
+                    {{item.price}}
+                  </li>
+                  <li>
+                    <img ng-src="{{item.image}}" />
+                  </li>
+                  <li>
+                    {{item.hashtag}}
+                  </li>
+                  <li>
+                    Item quantity: {{item.quantity}}
+                  </li>
+                  <li>
+                    Item subtotal: {{item.subtotal}}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div>
+              Total: {{cart.total}}
+            </div>
+            <div class="btn-group-vertical btn-group-sm">
+              <button type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
+            </div>
+          </div>
+          <button ui-sref="paypal()">Checkout</button>
+        </div>
+    </div>
+  </div>

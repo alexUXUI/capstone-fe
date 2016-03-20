@@ -41,7 +41,7 @@ var app = angular.module('capstone', ["ui.router", 'ngStorage', ])
       url: '/createpost'
     }).state('feedback', {
       templateUrl: 'partials/feedback.html',
-      controller: "CreatePostController",
+      controller: "paypal",
       url: '/feedback'
     }).state('postview', {
       templateUrl: 'partials/postview.html',

@@ -16,11 +16,9 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
     post.status = !post.status;
     console.log(id);
   }
-
   $http.get('http://localhost:3000/getusers').then(function(data){
     console.log('heres the users you wanted: ', data);
   })
-
   $http.get('http://localhost:3000/trending/hastags').then(function(data){
     $scope.hashtags = data.data.data
     console.log('heres the hastags:', $scope.hashtags);

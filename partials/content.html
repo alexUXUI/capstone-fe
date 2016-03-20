@@ -42,24 +42,16 @@
             <p>{{post.forsale}}</p>
             <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">${{post.price}}</a></h2>
           </div>
-          <!-- comments -->
-          <div class="post-comment">
-            <form name='comment' ng-submit="addComment()">
-              <input ng-model="comment" type="input" name="text" value=""></br>
-              <input type="submit" value="Submit">
-            </form>
-            <p>{{comment}}</p>
-          </div>
           <!-- hearts -->
           <div class="post-heart">
             <div class="init-wrap" ng-init="init()">
               <i class="fa fa-heart-o active" ng-if="post.status" ng-click="post.status = !post.status;"></i>
               <i class="fa fa-heart inactive" ng-if="!post.status" ng-click="post.status = !post.status;"></i>
               {{post.likes}}
+              <form class="" method="post" ng-submit="likePost(post.post_number)" ng-model()>
+                <input ng-model="" type="submit" name="name" value="like this post">
+              </form>
             </div>
-            <form class="" method="post" ng-submit="likePost(post.post_number)" ng-model()>
-              <input ng-model="" type="submit" name="name" value="like this post">
-            </form>
           </div>
         </div>
         <!-- end three seciton -->

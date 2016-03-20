@@ -154,14 +154,14 @@ i.inactive {
 
 .post-comment {
   padding: 0;
-  width: 33%;
+  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 .post-heart {
   padding: 0;
-  width: 33%;
+  width: 53%;
   flex-direction: column;
   justify-content: center;
   align-items: center; }

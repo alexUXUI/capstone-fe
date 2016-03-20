@@ -1,4 +1,4 @@
-app.controller('CreatePostController', function($scope, $http, $state){
+app.controller('CreatePostController', function($scope, $http, $state, $localStorage){
   console.log('hello from create a post');
   // $scope.postData = {}
   // $scope.postData.title = 'whatev';

@@ -1,5 +1,5 @@
-<nav-bar></nav-bar>
-<div class="single-post">
+<!-- <nav-bar></nav-bar> -->
+<!-- <div class="single-post">
   <h1>Your post</h1>
   <h1>{{title}}</h1>
   <a ui-sref="profile({{user_id}})"><img src="{{userPhoto}}" /></a>
@@ -10,4 +10,92 @@
   <h5>{{price}}</h5>
   <h6>{{hashtags}}</h6>
   <h6>{{created_at}}</h6>
+</div>
+ -->
+
+
+
+<div class="content-page-wrapper">
+  <!-- section 1 -->
+  <div class='content-page-nav'>
+    <nav-bar></nav-bar>
+  </div>
+  <!-- section 2 -->
+  <div class='content-page-posts'>
+    <ul class="posts-container">
+    <h1>Your post</h1>
+    <!-- start post -->
+      <li class='post' >
+        <!-- Top section -->
+        <div class="post-top-section">
+          <!-- left side -->
+          <div class="title-date">
+            <h3 ui-sref="post({id: {{post.post_number}}})">{{title}}</h3>
+            <p>{{reated_at}}</p>
+          </div>
+          <!-- Right side -->
+          <div class="userimage">
+            <a ui-sref="profile({id: {{post.user_id}}})">
+              <img class="user_image" src="{{user_photo}}" />
+            </a>
+          </div>
+        </div>
+        <!-- Image container -->
+        <div class="post-image-container">
+          <img src="{{image_content}}" class='post-image' />
+        </div>
+        <!-- hashtags -->
+        <div class="hashtags">
+          <h4>{{hashtag}}</h4>
+        </div>
+        <!-- text -->
+        <div class="post-text-container">
+          <p class="post-text">{{text}}</p>
+        </div>
+        <div class="post-shop-comment-heart">
+          <!-- shop -->
+          <div class="post-shop">
+            <i class="fa fa-shopping-cart fa-4x"></i>
+            <p>{{forsale}}</p>
+            <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">${{price}}</a></h2>
+          </div>
+          <!-- hearts -->
+          <div class="post-heart">
+            <div class="init-wrap" ng-init="init()">
+              <i class="fa fa-heart-o active" ng-if="post.status" ng-click="post.status = !post.status;"></i>
+              <i class="fa fa-heart inactive" ng-if="!post.status" ng-click="post.status = !post.status;"></i>
+              {{post.likes}}
+              <form class="" method="post" ng-submit="likePost(post.post_number)" ng-model()>
+                <input ng-model="" type="submit" name="name" value="like this post">
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end post bottom seciton -->
+      </li>
+      <!-- end posts -->
+    </ul>
+  </div>
+  <!-- section 3 -->
+  <div class='content-page-hashtags'>
+    <div class="content-right">
+      <form class="search-form">
+        <i class="fa fa-search"></i>
+        <input class='rich-search' type="text" placeholder="Search for anything" ng-model="search">
+      </form>
+      <div class='trending-hashtags'>
+        <h3>Trending &nbsp;|&nbsp;<i class="fa fa-hashtag"></i>'s</h3>
+        <hr>
+        <ul class='tredning-list'>
+          <li class='trending' ng-repeat="hashtag in trending">{{hashtag}}</li>
+        </ul>
+      </div>
+      <div class="">
+        <ul>
+          <li ng-repeat=""></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Page -->
 </div>
