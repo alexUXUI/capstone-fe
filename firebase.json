@@ -5,5 +5,10 @@
     "firebase.json",
     "**/.*",
     "**/node_modules/**"
-  ]
+  ],
+  "redirects": [ {
+    "source" : "/validating",
+    "destination" : "https://rebelmarkets.firebaseapp.com/#/content",
+    "type" : 302
+  }]
 }

@@ -16,5 +16,7 @@
   "bugs": {
     "url": "https://github.com/alexUXUI/capstone-fe/issues"
   },
-  "homepage": "https://github.com/alexUXUI/capstone-fe#readme"
+  "homepage": "https://github.com/alexUXUI/capstone-fe#readme",
+  "dependencies": {
+  }
 }

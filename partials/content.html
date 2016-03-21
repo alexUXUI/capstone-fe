@@ -13,12 +13,12 @@
         <div class="post-top-section">
           <!-- left side -->
           <div class="title-date">
-            <h3 ui-sref="post({id: {{post.post_number}}})">{{post.post_title}}</h3>
+            <h3 ui-sref="post({id: post.post_number})">{{post.post_title}}</h3>
             <p>{{post.post_created_at}}</p>
           </div>
           <!-- Right side -->
           <div class="userimage">
-            <a ui-sref="profile({id: {{post.user_id}}})">
+            <a ui-sref="profile({id: post.user_id})">
               <img class="user_image" src="{{post.user_photo}}" />
             </a>
           </div>
@@ -40,17 +40,14 @@
           <div class="post-shop">
             <i class="fa fa-shopping-cart fa-4x"></i>
             <p>{{post.forsale}}</p>
-            <h2><a ui-sref="shoppingcart({id: {{post.post_number}}})">${{post.price}}</a></h2>
+            <h2><a ui-sref="shoppingcart({id: post.post_number})">${{post.price}}</a></h2>
           </div>
           <!-- hearts -->
           <div class="post-heart">
             <div class="init-wrap" ng-init="init()">
-              <i class="fa fa-heart-o active" ng-if="post.status" ng-click="post.status = !post.status;"></i>
-              <i class="fa fa-heart inactive" ng-if="!post.status" ng-click="post.status = !post.status;"></i>
+              <i class="fa fa-heart-o active" ng-if="post.status" ng-click="likePost(post.post_number)"></i>
+              <i class="fa fa-heart inactive" ng-if="!post.status" ng-click="likePost(post.post_number)"></i>
               {{post.likes}}
-              <form class="" method="post" ng-submit="likePost(post.post_number)" ng-model()>
-                <input ng-model="" type="submit" name="name" value="like this post">
-              </form>
             </div>
           </div>
         </div>
@@ -67,25 +64,38 @@
         <input class='rich-search' type="text" placeholder="Search for anything" ng-model="search">
       </form>
       <div class='trending-hashtags'>
+
+        <!-- carousel -->
+        <!-- <slick settings="slickConfig" ng-if='hashtagsLoaded' class='trending-hastags'>
+            <div class='' ng-repeat="hashtag in trending">
+              <div class="">
+                {{}}
+              </div>
+            </div>
+        </slick> -->
+        <div class="">
+          {{currentHashtag}}
+        </div>
+        <!-- end carousel -->
+
         <h3>Trending &nbsp;|&nbsp;<i class="fa fa-hashtag"></i>'s</h3>
         <hr>
-        <ul class='tredning-list'>
-          <li class='trending' ng-repeat="hashtag in trending">{{hashtag}}</li>
-        </ul>
       </div>
-      <div class="">
-        <ul>
-          <li ng-repeat=""></li>
-        </ul>
+      <div class="users-wrapper">
+        <h3 class='rebel-community'>Rebel Community</h3>
+        <div class="users">
+          <ul>
+            <li ng-repeat="rebel in userObj" class='rebel'>
+              <h2><img ng-src="{{rebel.user_image}}" />&nbsp;|&nbsp;{{rebel.id}}{{rebel.first_name}}, {{rebel.last_name}}</h2>
+              <p ui-sref='profile({id: rebel.id})'>profile</p>
+              <hr>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+
+
   <!-- End Page -->
 </div>
-
-<script>
-$('.hearts').click(function(){
-    $(this).next('ul').slideToggle('500');
-    $(this).find('i').toggleClass('fa fa-heart-o icon-4x fa fa-heart icon-4x')
-});
-</script>

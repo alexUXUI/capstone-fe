@@ -91,6 +91,25 @@
     text-align: left;
     font-size: 1.5em; }
 
+.rebel-community {
+  text-align: center; }
+
+.users {
+  overflow: scroll;
+  height: 400px;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; }
+  .users .rebel {
+    margin-top: 50px;
+    height: 100px;
+    background-color: white;
+    width: 400px; }
+
 .post-top-section {
   display: flex;
   flex-direction: row;
@@ -173,25 +192,19 @@ i.inactive {
 
 .post-shop {
   padding: 0;
-  width: 33%;
+  width: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.post-comment {
-  padding: 0;
-  width: 50%;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
 
 .post-heart {
   padding: 0;
-  width: 53%;
+  width: 90%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  margin-right: 0;
+  margin-left: 50%;
+  padding: 5%; }
 
 .init-wrap {
   display: flex;
@@ -439,7 +452,28 @@ svg {
 .submit-payment {
   width: 40%;
   margin-right: 5%;
-  margin-left: 5%; }
+  margin-left: 5%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin-right: 2%;
+  margin-top: 1%; }
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 body {
   margin: 0;

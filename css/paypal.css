@@ -44,6 +44,27 @@
 .submit-payment {
   width: 40%;
   margin-right: 5%;
-  margin-left: 5%; }
+  margin-left: 5%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  margin-right: 2%;
+  margin-top: 1%; }
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=paypal.css.map */

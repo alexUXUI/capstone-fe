@@ -1,4 +1,4 @@
-app.controller('ContentController', function($scope, $http, $state, $localStorage){
+app.controller('ContentController', function($scope, $http, $state, $localStorage, $interval){
 
   $scope.userId = $localStorage.userIdentification;
 
@@ -9,15 +9,14 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
     $state.go('content', data)
   })
 
-  $scope.init = function(){
-    $scope.post.status = false;
-  }
-  $scope.changeStatus = function(post){
-    post.status = !post.status;
-    console.log(id);
-  }
   $http.get('http://localhost:3000/getusers').then(function(data){
     console.log('heres the users you wanted: ', data);
+    $scope.userObj = data.data.users
+    $scope.listUsers = function(data) {
+      data.forEach(function(item){
+      })
+    }
+
   })
   $http.get('http://localhost:3000/trending/hastags').then(function(data){
     $scope.hashtags = data.data.data
@@ -32,13 +31,26 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
       console.log(blankArray);
     }
     $scope.trending = blankArray;
+    $scope.hashtagsLoaded = true;
+    $interval($scope.slideShow, 1000)
   })
+
+
+  $scope.slideShow = function(){
+    $scope.currentHashtag = $scope.trending[$scope.currentIndex];
+    $scope.currentIndex ++
+    if($scope.currentIndex >= $scope.trending.length){
+      $scope.currentIndex = 0;
+    }
+  }
+
+  $scope.currentIndex = 0;
 
   $scope.addComment = function(){
     $scope.comment;
     $http.post('http://localhost:3000/submit/comment/' + $scope.userId, $scope.comment).then(function(data){
       // console.log(data.data);
-      $state.go('content', data.data);
+      $state.reload();
     }).catch(function(err){
       console.log('error posting', err);
     })
@@ -47,7 +59,28 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
   $scope.likePost = function(id){
     $http.get('http://localhost:3000/post/like/' + id).then(function(data){
       // console.log(data);
-      $state.go('content', data.data);
+      $state.reload();
     })
   }
+
+////slick
+
+$scope.slickConfig = {
+    enabled: true,
+}
+
+  // $scope.slickConfig = {
+  //     enabled: true,
+  //     autoplay: true,
+  //     draggable: false,
+  //     autoplaySpeed: 3000,
+  //     method: {},
+  //     event: {
+  //         beforeChange: function (event, slick, currentSlide, nextSlide) {
+  //         },
+  //         afterChange: function (event, slick, currentSlide, nextSlide) {
+  //         }
+  //     }
+  // };
+
 })

@@ -1,4 +1,4 @@
-var app = angular.module('capstone', ["ui.router", 'ngStorage', ])
+var app = angular.module('capstone', ["ui.router", 'ngStorage', 'slickCarousel'])
   .config(function($stateProvider, $urlRouterProvider, $httpProvider){
     $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function ($q, $location, $localStorage) {
        return {
