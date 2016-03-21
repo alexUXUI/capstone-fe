@@ -23,4 +23,12 @@
   height: 500px;
   width: 100%; }
 
+.add-to-cart {
+  border: none;
+  background-color: white; }
+
+.post-text-shop {
+  height: 100px;
+  padding: 10%; }
+
 /*# sourceMappingURL=shoppingcart.css.map */

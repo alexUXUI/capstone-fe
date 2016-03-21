@@ -47,34 +47,11 @@
   align-items: center;
   border: none;
   border-bottom: 2px solid black;
-  width:80%;
+  width:100%;
   height: 55px;
   background-color: #424242;
   transition: border-bottom .1s, background-color .5s ease;
 }
-
-.fa {
-  width: 40px
-}
-
-////////////
-
-.call-to-scroll {
-  text-align: center;
-  color: #ccc;
-  z-index: -1
-
-}
-
-
-//////// .slick-slider
-// 
-// .slick-slider{
-//   width: 50%;
-// }
-
-
-//////////////////
 
 .rich-search:focus {
   outline: none;
@@ -82,9 +59,20 @@
   background-color: rgb(250,250,250);
   color:black;
 }
+//////////////////
+
+////////////
+
+.call-to-scroll {
+  text-align: center;
+  color: #ccc;
+  z-index: -1
+}
+
+//////////////////
 ////////////// trending
 .trending-hashtags {
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: #fefefe;
   text-align: center;
   width:100%;
@@ -97,7 +85,11 @@
 .rebel-community {
   text-align: center;
 }
+.users-wrapper {
+  margin-top: 50px;
+}
 .users{
+  margin: auto;
   overflow: scroll;
   height:400px;
   background-color: white;
@@ -114,6 +106,17 @@
     width: 400px;
   }
 }
+.user-header {
+  height:100px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;;
+  align-items: center;
+  width:100%;
+  margin: auto;
+  padding: 5%;
+}
 //////////////////////
 //////POSTS
 //////////////////////
@@ -124,7 +127,6 @@
   height:100px;
   margin-top: 5%;
 }
-
 
 .post-top-section .title-date{
   width:60%;
@@ -181,14 +183,26 @@ hr {
   padding-right: 9%;
   font-size: 1.25em;
 }
+.trending-hashtags {
+  padding: 5%;
+}
 
 .hashtags{
   display: flex;
   flex-direction: row;
 }
+.single-hashtag {
+  padding: 5%;
+  font-size: 1em;
+  height:100px;
+}
 
 .hashtags-and-likes > * {
   width: 50%;
+}
+
+.fa {
+  width: 40px
 }
 
 .active, .inactive {font-size:40px;cursor:pointer;}
@@ -197,37 +211,37 @@ i.active { color: #ccc}
 i.inactive {color: #FF333A;
 }
 
-
 .post-shop-comment-heart {
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   width:100%;
+  margin:auto;
+  padding:5%;
+  margin-left: 5%;
 }
 
 .post-shop {
-  padding:0;
-  width:10%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction:column;
+  width:50%;
+
 }
-//
-// .post-comment {
-//   padding:0;
-//   width:50%;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
 
 .post-heart {
-  padding:0;
-  width:90%;
-  flex-direction: column;
-  margin-right: 0;
-  margin-left: 50%;
-  padding:5%;
+  display: flex;
+  flex-direction:column;;
+  width:50%;
+  justify-content: flex-end;
+}
+
+.post-price {
+  font-size: 1em;
+  margin-left: 3%;
+}
+
+.post-likes {
+  font-size: 1em;
+  margin-left: 5%;
 }
 
 .init-wrap {

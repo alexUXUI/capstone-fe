@@ -38,16 +38,17 @@
         <div class="post-shop-comment-heart">
           <!-- shop -->
           <div class="post-shop">
-            <i class="fa fa-shopping-cart fa-4x"></i>
-            <p>{{post.forsale}}</p>
-            <h2><a ui-sref="shoppingcart({id: post.post_number})">${{post.price}}</a></h2>
+            <a ui-sref="shoppingcart({id: post.post_number})" >
+              <i class="fa fa-shopping-cart fa-4x"></i>
+              <h2 class='post-price' style="margin-top:0;">${{post.price}}</h2>
+            </a>
           </div>
           <!-- hearts -->
           <div class="post-heart">
             <div class="init-wrap" ng-init="init()">
               <i class="fa fa-heart-o active" ng-if="post.status" ng-click="likePost(post.post_number)"></i>
               <i class="fa fa-heart inactive" ng-if="!post.status" ng-click="likePost(post.post_number)"></i>
-              {{post.likes}}
+              <p class='post-likes'>{{post.likes}}</p>
             </div>
           </div>
         </div>
@@ -64,25 +65,17 @@
         <input class='rich-search' type="text" placeholder="Search for anything" ng-model="search">
       </form>
       <div class='trending-hashtags'>
-
-        <!-- carousel -->
-        <!-- <slick settings="slickConfig" ng-if='hashtagsLoaded' class='trending-hastags'>
-            <div class='' ng-repeat="hashtag in trending">
-              <div class="">
-                {{}}
-              </div>
-            </div>
-        </slick> -->
-        <div class="">
-          {{currentHashtag}}
-        </div>
-        <!-- end carousel -->
-
         <h3>Trending &nbsp;|&nbsp;<i class="fa fa-hashtag"></i>'s</h3>
         <hr>
+        <div class="single-hashtag">
+          {{currentHashtag}}
+        </div>
       </div>
       <div class="users-wrapper">
-        <h3 class='rebel-community'>Rebel Community</h3>
+        <div class='user-header'>
+          <h3 class='rebel-community'>Rebel Community</h3>
+          <hr>
+        </div>
         <div class="users">
           <ul>
             <li ng-repeat="rebel in userObj" class='rebel'>

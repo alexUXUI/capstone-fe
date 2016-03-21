@@ -30,12 +30,12 @@
         </div>
         <!-- text -->
         <div class="post-text-container">
-          <p class="post-text">{{artObject.text}}</p>
+          <p class="post-text-shop">{{artObject.text}}</p>
         </div>
         <div class="post-shop-comment-heart">
           <div class="btn-group-vertical btn-group-sm">
             <input type="number" name="name" ng-model="artObject.quantity" placeholder="quantity">
-            <button type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
+            <button class='add-to-cart' type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
           </div>
         </div>
         <!-- end three seciton -->
