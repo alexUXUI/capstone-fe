@@ -1,69 +1,66 @@
-<!-- <nav-bar></nav-bar> -->
 <div class="content-page-wrapper">
   <!-- section 1 -->
   <div class='content-page-nav'>
     <nav-bar></nav-bar>
   </div>
   <!-- section 2 -->
-  <div class='content-page-posts'>
+  <div class='content-page-posts' style="margin-top:60px;">
     <ul class="posts-container">
-    <!-- start post -->
       <li class='post' >
         <!-- Top section -->
         <div id="creditcard">
-          <!-- <form action="http://localhost:3000/paypal/create"> -->
-            <div class="demo-container">
-              <div class="card-wrapper"></div>
-              <div class="form-container active">
-                <form action="http://localhost:3000/paypal/create" id="cardCredit" class="card-input">
-                  <!-- <input placeholder="Card number" type="text" name="number">
-                  <input placeholder="Full name" type="text" name="name">
-                  <input placeholder="MM/YY" type="text" name="expiry">
-                  <input placeholder="CVC" type="text" name="cvc"> -->
-                  <div class="form-group">
-                    <input type="hidden" name="method" value="credit_card">
-                    <input type="text" id="amount" name="amount" placeholder="amount" required>
-                    <input type="text" placeholder="currency" id="currency" maxlength="3" placeholder="USD" name="currency" required>
-                  </div>
-                  <div class="form-group">
-                    <input placeholder="first name" type="text" id="first_name" name="first_name" required>
-                    <input placeholder="last name" type="text" id="last_name" name="last_name" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" id="number" name="number" placeholder="Card Number" required>
-                    <input  type="text" id="type" name="type" placeholder="Card Type" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" id="expire_month" name="expire_month" placeholder="expire month" required>
-                    <input type="text" id="expire_year" name="expire_year" placeholder="expire year" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="text" id="cvv2" name="cvv2" placeholder="CVV2" required>
-                    <button class="submit-payment" type="submit">Create Payment</button>
-                  </div>
-                </form>
+          <div class="card-wrapper"></div>
+          <div class="form-container active">
+            <form action="http://localhost:3000/paypal/create" id="cardCredit" class="card-input">
+              <!-- <input placeholder="Card number" type="text" name="number">
+              <input placeholder="Full name" type="text" name="name">
+              <input placeholder="MM/YY" type="text" name="expiry">
+              <input placeholder="CVC" type="text" name="cvc"> -->
+              <div class="form-group">
+                <input type="hidden" name="method" value="credit_card">
+                <input type="text" id="amount" name="amount" placeholder="amount" required>
+                <input type="text" placeholder="currency" id="currency" maxlength="3" placeholder="USD" name="currency" required>
               </div>
-            </div>
+              <div class="form-group">
+                <input placeholder="first name" type="text" id="first_name" name="first_name" required>
+                <input placeholder="last name" type="text" id="last_name" name="last_name" required>
+              </div>
+              <div class="form-group">
+                <input type="text" id="number" name="number" placeholder="Card Number" required>
+                <input  type="text" id="type" name="type" placeholder="Card Type" required>
+              </div>
+              <div class="form-group">
+                <input type="text" id="expire_month" name="expire_month" placeholder="expire month" required>
+                <input type="text" id="expire_year" name="expire_year" placeholder="expire year" required>
+              </div>
+              <div class="form-group">
+                <input type="text" id="cvv2" name="cvv2" placeholder="CVV2" required>
+                <button class="submit-payment" type="submit">Create Payment</button>
+              </div>
+            </form>
+          </div>
         </div>
         <!-- end post bottom seciton -->
       </li>
-      <!-- end posts -->
     </ul>
+    <!--end of section 2 -->
   </div>
   <!-- section 3 -->
-  <div class='content-page-hashtags'>
-    <div class="content-right">
-        <!--print to screen -->
-        <h2>What you're buying</h2>
-        {{cart[0].title}}<br>
-        {{cart[0].image}}<br>
-        {{cart[0].hashtag}}<br>
-        {{cart[0].likes}}<br>
-        {{cart[0].price}}<br>
-        {{cart[0].quantity}}<br>
-        your total {{cart.total}}<br>
+  <div class='your-cart'>
+    <h2>What you're buying</h2>
+    <div class="cart-wrapper">
+      <div class='mini-post'>
+        <h3>{{cart[0].title}}</h3>
+        <img ng-src="{{cart[0].image}}" class="mini-image" />
+        <p>{{cart[0].hashtag}}<br></p>
+        <p>{{cart[0].likes}}<br></p>
+        <p>{{cart[0].price}}<br></p>
+        <p>{{cart[0].quantity}}<br></p>
+        <h1>your total {{cart.total}}</h1>
+      </div>
     </div>
   </div>
+</div>
 
 <script src="../lib/js/card.js"></script>
 <script>

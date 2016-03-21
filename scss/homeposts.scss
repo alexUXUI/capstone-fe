@@ -18,11 +18,13 @@
 }
 .content-page-hashtags{
   width: 30%;
-  padding-top: 185px;
+  padding-top: 125px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
+  background-color: #f6f6f6;
+  height: 100vh
 }
 //////// search
 //
@@ -47,6 +49,7 @@
   border-bottom: 2px solid black;
   width:80%;
   height: 55px;
+  background-color: #424242;
   transition: border-bottom .1s, background-color .5s ease;
 }
 
@@ -72,21 +75,17 @@
   background-color: rgb(250,250,250);
   color:black;
 }
-
-
 ////////////// trending
-
 .trending-hashtags {
   margin-top: 100px;
   background-color: #fefefe;
   text-align: center;
-  .trending{
+  width:100%;
+  .trending {
     text-align: left;
     font-size: 1.5em;
   }
 }
-
-
 //////////////////////
 //////POSTS
 //////////////////////
@@ -116,7 +115,7 @@
 }
 
 .posts-container{
-  width:750px;
+  width:80%;
   margin: auto;
   margin-top: 70px;
 }
@@ -132,7 +131,7 @@ hr {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width:600px;
+  width:100%;
   -webkit-box-shadow: 0px 0px 95px -29px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 95px -29px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 95px -29px rgba(0,0,0,0.75);

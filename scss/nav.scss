@@ -5,15 +5,19 @@
   align-items:stretch;
   margin-left: 0;
   font-size: 1.5em;
-  // text-align: left;
   z-index: 0;
   position:fixed;
   padding-top: 50px;
+  background-color: #424242;
+  padding-right: 50px;
+  color:white;
+  a {
+    color:white;
+  }
 }
-
 .navi-wrapper {
-    position:fixed;
-    // background-color:#ccc;
+  position:fixed;
+  color:white;
 }
 
 .brand-one-mini {

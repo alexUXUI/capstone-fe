@@ -7,7 +7,6 @@
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 600px;
   padding: 5%;
   -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
@@ -37,11 +36,13 @@
 
 .content-page-hashtags {
   width: 30%;
-  padding-top: 185px;
+  padding-top: 125px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed; }
+  position: fixed;
+  background-color: #f6f6f6;
+  height: 100vh; }
 
 .search-form {
   z-index: 1000;
@@ -64,6 +65,7 @@
   border-bottom: 2px solid black;
   width: 80%;
   height: 55px;
+  background-color: #424242;
   transition: border-bottom .1s, background-color .5s ease; }
 
 .fa {
@@ -83,7 +85,8 @@
 .trending-hashtags {
   margin-top: 100px;
   background-color: #fefefe;
-  text-align: center; }
+  text-align: center;
+  width: 100%; }
   .trending-hashtags .trending {
     text-align: left;
     font-size: 1.5em; }
@@ -109,7 +112,7 @@
   border-radius: 50%; }
 
 .posts-container {
-  width: 750px;
+  width: 80%;
   margin: auto;
   margin-top: 70px; }
 
@@ -123,7 +126,7 @@ hr {
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 600px;
+  width: 100%;
   -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75); }
@@ -195,6 +198,31 @@ i.inactive {
   margin: auto;
   flex-direction: column;
   margin-left: 60%; }
+
+.mini-image {
+  height: 200px;
+  width: 200px; }
+
+.mini-post {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.your-cart {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  align-items: center;
+  background-color: #ccc;
+  width: 30%; }
+
+.cart-wrapper {
+  background-color: white;
+  margin-top: 20px;
+  height: 500px;
+  width: 100%; }
 
 .single-post {
   margin: auto;
@@ -340,10 +368,16 @@ svg {
   font-size: 1.5em;
   z-index: 0;
   position: fixed;
-  padding-top: 50px; }
+  padding-top: 50px;
+  background-color: #424242;
+  padding-right: 50px;
+  color: white; }
+  .navi a {
+    color: white; }
 
 .navi-wrapper {
-  position: fixed; }
+  position: fixed;
+  color: white; }
 
 .brand-one-mini {
   margin-top: 50px;
@@ -359,9 +393,6 @@ svg {
   letter-spacing: 10px;
   margin-left: 40px; }
 
-.demo-container {
-  padding: 15%; }
-
 .card-input {
   background-color: white;
   font-size: .75em;
@@ -372,11 +403,12 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
-  padding: 5%; }
+  margin-top: 10%;
+  margin-bottom: 10%; }
   .card-input .form-group {
     display: flex;
-    flex-direction: row; }
+    flex-direction: row;
+    width: 80%; }
     .card-input .form-group .submit-payment {
       border: none;
       background-color: black;
@@ -387,9 +419,10 @@ svg {
       margin: auto;
       border: none;
       border-bottom: 2px solid black;
-      width: 40%;
+      width: 45%;
       height: 40px;
-      transition: border-bottom .1s, background-color .5s ease; }
+      transition: border-bottom .1s, background-color .5s ease;
+      margin-top: 3%; }
     .card-input .form-group input:focus {
       outline: none;
       border-bottom: 2px solid #FF333A;
@@ -397,6 +430,16 @@ svg {
       color: black; }
     .card-input .form-group .full-row {
       width: 100%; }
+
+#creditcard {
+  width: 100%;
+  background-color: white;
+  margin-top: 10%; }
+
+.submit-payment {
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%; }
 
 body {
   margin: 0;

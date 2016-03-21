@@ -1,3 +1,26 @@
+.mini-image {
+  height: 200px;
+  width: 200px; }
 
+.mini-post {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.your-cart {
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  align-items: center;
+  background-color: #ccc;
+  width: 30%; }
+
+.cart-wrapper {
+  background-color: white;
+  margin-top: 20px;
+  height: 500px;
+  width: 100%; }
 
 /*# sourceMappingURL=shoppingcart.css.map */
