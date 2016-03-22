@@ -1,6 +1,6 @@
 app.controller('PostViewController', function($scope, $http, $state){
   var postNumer = $state.params.id;
-  $http.get('http://localhost:3000/postview/' + postNumer).then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/postview/' + postNumer).then(function(data){
     $scope.title = data.data.post.title;
     $scope.images = data.data.post.image_content;
     $scope.text = data.data.post.text_content;

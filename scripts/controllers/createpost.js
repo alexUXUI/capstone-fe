@@ -10,7 +10,7 @@ app.controller('CreatePostController', function($scope, $http, $state, $localSto
   // $scope.postData.likes = 0;
   // $scope.postData.comments = ['hey', 'its', 'cool'];
   $scope.submitData = function(){
-    $http.post('http://localhost:3000/submitpost', $scope.postData).then(function(data){
+    $http.post('https://rebelmarkets.herokuapp.com/submitpost', $scope.postData).then(function(data){
       console.log(data.data);
       $state.go('content', data.data);
     }).catch(function(err){

@@ -2,14 +2,14 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
 
   $scope.userId = $localStorage.userIdentification;
 
-  $http.get('http://localhost:3000/allposts').then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/allposts').then(function(data){
     $scope.posts = data.data.data;
     $scope.id = data.data.id;
     $scope.post_id = data.data.user_id
     $state.go('content', data)
   })
 
-  $http.get('http://localhost:3000/getusers').then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/getusers').then(function(data){
     console.log('heres the users you wanted: ', data);
     $scope.userObj = data.data.users
     $scope.listUsers = function(data) {
@@ -18,7 +18,7 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
     }
 
   })
-  $http.get('http://localhost:3000/trending/hastags').then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/trending/hastags').then(function(data){
     $scope.hashtags = data.data.data
     console.log('heres the hastags:', $scope.hashtags);
     var blankArray = [];
@@ -48,7 +48,7 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
 
   $scope.addComment = function(){
     $scope.comment;
-    $http.post('http://localhost:3000/submit/comment/' + $scope.userId, $scope.comment).then(function(data){
+    $http.post('https://rebelmarkets.herokuapp.com/submit/comment/' + $scope.userId, $scope.comment).then(function(data){
       // console.log(data.data);
       $state.reload();
     }).catch(function(err){
@@ -57,7 +57,7 @@ app.controller('ContentController', function($scope, $http, $state, $localStorag
   }
 
   $scope.likePost = function(id){
-    $http.get('http://localhost:3000/post/like/' + id).then(function(data){
+    $http.get('https://rebelmarkets.herokuapp.com/post/like/' + id).then(function(data){
       // console.log(data);
       $state.reload();
     })

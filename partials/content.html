@@ -6,8 +6,12 @@
   <!-- section 2 -->
   <div class='content-page-posts'>
     <ul class="posts-container">
-      <p class='call-to-scroll'>Scroll down to see more</p>
-    <!-- start post -->
+      <!-- <p class='call-to-scroll'>Scroll down to see more</p> -->
+      <form class="search-form">
+        <!-- <i class="fa fa-search"></i> -->
+        <input class='rich-search' type="text" placeholder="Search for anything" ng-model="search">
+      </form>
+      <!-- start post -->
       <li class='post' ng-repeat="post in posts | filter:search" data="{{post.id}}" >
         <!-- Top section -->
         <div class="post-top-section">
@@ -60,10 +64,6 @@
   <!-- section 3 -->
   <div class='content-page-hashtags'>
     <div class="content-right">
-      <form class="search-form">
-        <!-- <i class="fa fa-search"></i> -->
-        <input class='rich-search' type="text" placeholder="Search for anything" ng-model="search">
-      </form>
       <div class='trending-hashtags'>
         <h3>Trending &nbsp;|&nbsp;<i class="fa fa-hashtag"></i>'s</h3>
         <hr>
@@ -88,7 +88,5 @@
       </div>
     </div>
   </div>
-
-
   <!-- End Page -->
 </div>

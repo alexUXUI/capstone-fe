@@ -1,7 +1,7 @@
 app.controller('shoppingcart', function($scope, $http, $state, $localStorage){
 
   $scope.id = $state.params.id
-  $http.get('http://localhost:3000/shopping/' + $state.params.id).then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/shopping/' + $state.params.id).then(function(data){
     console.log(data.data.data);
     var artObject = data.data.data;
     artObject.text = data.data.data.text_content;

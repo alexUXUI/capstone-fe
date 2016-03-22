@@ -7,7 +7,7 @@ app.controller('HomeController', function($scope, $http, $state, $localStorage){
   //   $scope.artObject.dateCreated = data.data.data.created_at;
   //   $scope.artObject.quantity = 1;
   // })
-  $http.get('http://localhost:3000/allposts').then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/allposts').then(function(data){
     $scope.posts = data.data.data;
     $scope.id = data.data.id;
     $scope.post_id = data.data.user_id
@@ -15,20 +15,12 @@ app.controller('HomeController', function($scope, $http, $state, $localStorage){
   })
   $scope.cart = [];
   $scope.price
-
   $scope.addToCart = function(item){
     $scope.cart.push(item)
     $scope.cart = $localStorage.finalCart;
     console.log('CART, COMING FROM HOME CONTROLLER, ' , $scope.cart);
   }
-
   $scope.checkout = function(){
     $state.go('paypal', data.data.data)
   }
-
-
-
-
-
-
 })

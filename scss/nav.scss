@@ -11,6 +11,9 @@
   background-color: #424242;
   padding-right: 50px;
   color:white;
+  -webkit-box-shadow: inset 0px 0px 95px -29px black;
+  -moz-box-shadow: inset 0px 0px 95px -29px black;
+  box-shadow: inset 0px 0px 95px -29px black;
   a {
     color:white;
   }

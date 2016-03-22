@@ -1,6 +1,6 @@
 app.controller('singlepost', function($scope, $http, $state, $localStorage){
   $scope.id = $state.params.id
-  $http.get('http://localhost:3000/postview/' + $state.params.id).then(function(data){
+  $http.get('https://rebelmarkets.herokuapp.com/postview/' + $state.params.id).then(function(data){
     var info = data.data.post;
     info.forEach(function(item){
       console.log(item);
