@@ -8,18 +8,20 @@
   z-index: 0;
   position: fixed;
   padding-top: 50px;
-  background-color: #424242;
+  background-color: #363636;
   padding-right: 50px;
-  color: white;
-  -webkit-box-shadow: inset 0px 0px 95px -29px black;
-  -moz-box-shadow: inset 0px 0px 95px -29px black;
-  box-shadow: inset 0px 0px 95px -29px black; }
+  color: white; }
   .navi a {
     color: white; }
 
 .navi-wrapper {
+  background-color: #363636;
   position: fixed;
-  color: white; }
+  color: white;
+  padding-right: 33px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
 
 .brand-one-mini {
   margin-top: 50px;
@@ -33,6 +35,7 @@
   font-size: 2em;
   font-family: 'Playfair Display', serif;
   letter-spacing: 10px;
-  margin-left: 40px; }
+  margin-left: 40px;
+  color: white; }
 
 /*# sourceMappingURL=nav.css.map */

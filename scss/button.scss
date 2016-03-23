@@ -16,8 +16,8 @@
   border-radius: 2px;
   margin: 0 auto;
   color: #fff;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   transition-property: color;
   -webkit-transition-property: color;
   transition-duration: 0.2s;
@@ -26,9 +26,10 @@
 .btn .slider {
   background: black;
   width: 800px;
-  height: 150px;
+  height: 50px;
   position: absolute;
-  display: block;
+  margin-top:-15px;
+  // display: block;
   z-index: 0;
   transform: skew(-15deg);
   -webkit-transform: skew(-15deg);
@@ -39,10 +40,6 @@
   -webkit-transition-duration: .5s;
 }
 .btn .label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   z-index: 1;
   color:black;
   font-size: 1.5em;

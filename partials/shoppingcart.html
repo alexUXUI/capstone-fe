@@ -6,7 +6,7 @@
   <!-- section 2 -->
   <div class='content-page-posts' style="margin-top:-43px;">
     <ul class="posts-container">
-      <li class='post' data="{{post.id}}" >
+      <li class='shopping-post' data="{{post.id}}" >
         <!-- Top section -->
         <div class="post-top-section">
           <!-- left side -->
@@ -21,7 +21,7 @@
           </div>
         </div>
         <!-- Image container -->
-        <div class="post-image-container">
+        <div class="shopping-post-image-container">
           <img src="{{artObject.image}}" class='post-image' />
         </div>
         <!-- hashtags -->
@@ -31,12 +31,6 @@
         <!-- text -->
         <div class="post-text-container">
           <p class="post-text-shop">{{artObject.text}}</p>
-        </div>
-        <div class="post-shop-comment-heart">
-          <div class="btn-group-vertical btn-group-sm">
-            <input type="number" name="name" ng-model="artObject.quantity" placeholder="quantity">
-            <button class='add-to-cart' type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
-          </div>
         </div>
         <!-- end three seciton -->
       </li>
@@ -57,6 +51,10 @@
           <h4>Item quantity: {{item.quantity}}</h4>
           <h4>Item subtotal: {{item.subtotal}}</h4>
         </div>
+      </div>
+      <div class="btn-group-vertical btn-group-sm">
+        <input type="number" name="name" ng-model="artObject.quantity" placeholder="quantity">
+        <button class='add-to-cart' type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
       </div>
       Total: {{cart.total}}
       <button ui-sref="paypal()">Checkout</button>

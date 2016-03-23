@@ -21,11 +21,11 @@
   position: fixed;
   width: 30%;
   padding-top: 135px;
-  background-color: white;
+  background-color: #363636;
   height: 100vh;
-  -webkit-box-shadow: inset 0px 0px 95px -29px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 0px 0px 95px -29px rgba(0,0,0,0.75);
-  box-shadow: inset 0px 0px 95px -29px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset 0px 0px 95px -29px #424242;
+  -moz-box-shadow: inset 0px 0px 95px -29px #424242;
+  box-shadow: inset 0px 0px 95px -29px #424242;
 }
 //////// search
 //
@@ -35,7 +35,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height:130px;
+  height:50px;
   background-color: blue;
   position: fixed;
   margin-top:0;
@@ -67,7 +67,7 @@
 }
 .rich-search:focus {
   outline: none;
-  border-bottom: 2px solid #FF333A;
+  border-bottom: 2px solid black;
   background-color: rgb(250,250,250);
   color:black;
   -webkit-box-shadow: inset 0px 0px 95px -29px white;
@@ -90,6 +90,9 @@
   height:200px;
   background-color: #424242;
   padding: 5%;
+  -webkit-box-shadow: 0px 0px 95px -29px black;
+  -moz-box-shadow: 0px 0px 95px -29px black;
+  box-shadow: 0px 0px 95px -29px black;
   .trending {
     text-align: left;
     font-size: 1.5em;
@@ -105,23 +108,28 @@
   width:100%;
 }
 .users-wrapper {
-  background-color: white;
+  background-color: #424242;
   color:white;
   width:25vw;
   overflow: scroll;
-  height:300px;
+  height:500px;
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 0px 95px -29px black;
+  -moz-box-shadow: 0px 0px 95px -29px black;
+  box-shadow: 0px 0px 95px -29px black;
 }
 .users{
   margin: auto;
   overflow: scroll;
   display: flex;
   width: 100%;
-  height:300px;
+  height:400px;
   .rebel {
   }
 }
 .user-header {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: -20px;
 }
 //////////////////////
 //////POSTS
@@ -153,7 +161,7 @@
 .posts-container{
   width:80%;
   margin: auto;
-  margin-top: 175px;
+  margin-top: 75px;
 }
 
 hr {
@@ -197,8 +205,9 @@ hr {
   flex-direction: row;
 }
 .single-hashtag {
-  padding: 5%;
-  font-size: 1em;
+  padding-bottom: 5%;
+  margin-top: 10px;
+  font-size: 2em;
   height:100px;
 }
 
