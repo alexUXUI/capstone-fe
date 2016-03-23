@@ -114,6 +114,9 @@
   display: flex;
   width: 100%;
   height: 400px; }
+  .users .rebel {
+    width: 20vw;
+    margin-left: 5%; }
 
 .user-header {
   margin-top: 20px;
@@ -165,15 +168,25 @@ hr {
   object-fit: contain; }
 
 .post-image-container {
-  height: 80%;
-  width: 80%;
-  background-color: #fefefe; }
+  height: 500px;
+  width: 100%;
+  background-color: #fefefe;
+  padding: 2%; }
+
+.post-text-container {
+  margin-top: 20px; }
 
 .post-text {
-  padding-top: 4%;
-  padding-left: 9%;
-  padding-right: 9%;
-  font-size: 1.25em; }
+  padding-top: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-family: 'Ruda', sans-serif; }
+
+.post-text::first-letter {
+  font-size: 2em;
+  line-height: 1em; }
 
 .hashtags {
   display: flex;
@@ -222,7 +235,8 @@ i.inactive {
   display: flex;
   flex-direction: column;
   width: 50%;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin-left: 8%; }
 
 .post-price {
   font-size: 1em;

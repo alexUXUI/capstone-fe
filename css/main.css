@@ -214,6 +214,9 @@
   display: flex;
   width: 100%;
   height: 400px; }
+  .users .rebel {
+    width: 20vw;
+    margin-left: 5%; }
 
 .user-header {
   margin-top: 20px;
@@ -265,15 +268,25 @@ hr {
   object-fit: contain; }
 
 .post-image-container {
-  height: 80%;
-  width: 80%;
-  background-color: #fefefe; }
+  height: 500px;
+  width: 100%;
+  background-color: #fefefe;
+  padding: 2%; }
+
+.post-text-container {
+  margin-top: 20px; }
 
 .post-text {
-  padding-top: 4%;
-  padding-left: 9%;
-  padding-right: 9%;
-  font-size: 1.25em; }
+  padding-top: 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 1.5em;
+  font-weight: lighter;
+  font-family: 'Ruda', sans-serif; }
+
+.post-text::first-letter {
+  font-size: 2em;
+  line-height: 1em; }
 
 .hashtags {
   display: flex;
@@ -322,7 +335,8 @@ i.inactive {
   display: flex;
   flex-direction: column;
   width: 50%;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  margin-left: 8%; }
 
 .post-price {
   font-size: 1em;
@@ -359,25 +373,28 @@ i.inactive {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 60%; }
 
 .your-cart {
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
+  padding-top: 0px;
   align-items: center;
   background-color: #ccc;
   width: 30%; }
 
 .cart-wrapper {
-  background-color: white;
+  background-color: #424242;
+  color: white;
   margin-top: 20px;
   height: 500px;
-  width: 100%; }
-
-.add-to-cart {
-  border: none;
-  background-color: white; }
+  width: 25vw;
+  -webkit-box-shadow: 0px 0px 95px -29px black;
+  -moz-box-shadow: 0px 0px 95px -29px black;
+  box-shadow: 0px 0px 95px -29px black;
+  display: flex;
+  flex-direction: column; }
 
 .post-text-shop {
   height: 100px;
@@ -400,6 +417,60 @@ i.inactive {
   height: 40%;
   width: 40%;
   background-color: #fefefe; }
+
+.checkout-btns {
+  bottom: 0;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  background-color: #424242;
+  -webkit-box-shadow: 0px 0px 95px -29px black;
+  -moz-box-shadow: 0px 0px 95px -29px black;
+  box-shadow: 0px 0px 95px -29px black; }
+
+.btn-row-one {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .btn-row-one .add-to-cart {
+    border: none;
+    background-color: white;
+    width: 35%;
+    height: 70px;
+    transition: .45s background-color; }
+  .btn-row-one .add-to-cart:hover {
+    background-color: cornflowerblue; }
+  .btn-row-one input {
+    height: 70px;
+    width: 45%;
+    font-size: 1.5em;
+    text-align: center; }
+
+.btn-row-two {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .btn-row-two .cart-total {
+    width: 45%;
+    background-color: #363636;
+    font-size: 2.25em; }
+  .btn-row-two button {
+    width: 35%;
+    height: 70px;
+    transition: .45s background-color;
+    border: none; }
+  .btn-row-two button:hover {
+    background-color: #19E898; }
+
+.content-page-hashtags {
+  height: 100%; }
 
 .single-post {
   margin: auto;
@@ -615,8 +686,6 @@ svg {
 
 .submit-payment {
   width: 40%;
-  margin-right: 5%;
-  margin-left: 5%;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -631,15 +700,17 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 40%; }
 
 .btn-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 50%; }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1250px) {
   body {
     font-size: 1em; }
 
@@ -655,16 +726,16 @@ svg {
   .content-page-posts {
     background-color: white;
     display: flex;
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
     position: absolute; }
 
   .content-page-hashtags {
     background-color: #f6f6f6;
     position: absolute;
-    width: 100%;
+    width: 100vw;
+    height: 300px;
     bottom: 0;
-    height: 100px;
     margin-bottom: 0;
     bottom: 0;
     position: fixed; }
@@ -682,7 +753,7 @@ svg {
     justify-content: center;
     align-items: center;
     height: 130px;
-    width: 100%;
+    width: 90%;
     background-color: white;
     position: relative;
     background-color: transparent;
@@ -698,7 +769,7 @@ svg {
     align-items: center;
     border: none;
     border-bottom: 2px solid black;
-    width: 100%;
+    width: 90%;
     height: 55px;
     background-color: #424242;
     transition: border-bottom .1s, background-color .5s ease;
@@ -706,21 +777,25 @@ svg {
     position: relative; }
 
   .content-page-hashtags {
-    background-color: #fdfdfd;
+    background-color: #363636;
     height: 200px;
     width: 100%; }
 
   .trending-hashtags {
-    width: 100%;
-    margin-top: -100px;
-    text-align: center; }
+    width: 100vw;
+    height: 0;
+    text-align: center;
+    background-color: #363636;
+    padding: 0; }
     .trending-hashtags .trending {
       text-align: left;
       font-size: 1.5em;
       width: 100%; }
     .trending-hashtags .single-hashtag {
       font-size: 2em;
-      width: 100%; }
+      width: 100%;
+      height: 200px;
+      position: absolute; }
 
   .users-wrapper {
     display: none; }
@@ -731,6 +806,7 @@ svg {
   .navi {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     height: 100px;
     width: 100%;
     align-items: center;
@@ -738,10 +814,13 @@ svg {
     font-size: 1.5em;
     z-index: 0;
     background-color: #424242;
-    padding-right: 50px;
-    color: white; }
+    color: white;
+    margin-bottom: 50px; }
     .navi a {
-      color: white; }
+      color: white;
+      width: 20%;
+      text-align: center;
+      margin: auto; }
     .navi hr {
       display: none; }
 
@@ -776,7 +855,10 @@ svg {
     border-radius: 50%; }
 
   .posts-container {
-    width: 80%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: auto;
     margin-top: 175px; }
 
@@ -790,7 +872,9 @@ svg {
     justify-content: center;
     align-items: center;
     background-color: white;
-    width: 100%;
+    width: 90%;
+    margin-left: -5%;
+    margin: auto;
     -webkit-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 95px -29px rgba(0, 0, 0, 0.75); }
@@ -811,7 +895,7 @@ svg {
     font-size: 1.25em; }
 
   .trending-hashtags {
-    padding: 5%; }
+    margin-top: -100px; }
 
   .hashtags {
     display: flex;

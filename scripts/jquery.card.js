@@ -1745,8 +1745,8 @@ Card = (function() {
     formSelectors: {
       numberInput: 'input[name="number"]',
       expiryInput: 'input[name="expiry"]',
-      cvcInput: 'input[name="cvc"]',
-      nameInput: 'input[name="name"]'
+      cvcInput: 'input[name="cvv2"]',
+      nameInput: 'input[name="last_name"]'
     },
     cardSelectors: {
       cardContainer: '.jp-card-container',

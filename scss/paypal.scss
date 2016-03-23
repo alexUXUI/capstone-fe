@@ -53,14 +53,11 @@
 
 .submit-payment {
   width: 40%;
-  margin-right: 5%;
-  margin-left: 5%;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   border:none;background-color:transparent;margin-right:2%;margin-top:1%;
 }
 
@@ -69,6 +66,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width:40%;
 }
 
 .btn-container {
@@ -76,4 +74,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width:50%;
+  
+}
+
+.last-row {
+  // margin-left: -12%;
 }

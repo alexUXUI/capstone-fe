@@ -38,25 +38,31 @@
     <!--end of section 2 -->
   </div>
   <!-- section 3 -->
-  <div class='your-cart'>
+  <div class='content-page-hashtags'>
       <!--print to screen -->
-      <h2>Your Shopping Cart</h2>
-      <div class="cart-wrapper">
-        <div ng-repeat="item in cart track by $index" class='mini-post'>
-          <h3>{{item.title}}</h3>
-          <img ng-src="{{item.image}}" class="mini-image" />
-          <p>{{item.hashtag}}</p>
-          <p>{{item.likes}}</p>
-          <p>{{item.price}}</p>
-          <h4>Item quantity: {{item.quantity}}</h4>
-          <h4>Item subtotal: {{item.subtotal}}</h4>
-        </div>
+    <h2 style="color:white;margin-top:-85px;">Your Shopping Cart</h2>
+    <hr>
+    <div class="cart-wrapper">
+
+      <div ng-repeat="item in cart track by $index" class='mini-post'>
+        <h3>{{item.title}}</h3>
+        <img ng-src="{{item.image}}" class="mini-image" />
+        <p>{{item.hashtag}}</p>
+        <p>{{item.likes}}</p>
+        <p>{{item.price}}</p>
+        <h4>Item quantity: {{item.quantity}}</h4>
+        <h4>Item subtotal: {{item.subtotal}}</h4>
       </div>
-      <div class="btn-group-vertical btn-group-sm">
+    </div>
+    <div class="checkout-btns">
+      <div class='btn-row-one'>
         <input type="number" name="name" ng-model="artObject.quantity" placeholder="quantity">
-        <button class='add-to-cart' type="button" name="button" ng-click="addToCart(artObject)">Add to cart</button>
+        <button class='add-to-cart' type="button" name="button" ng-click="addToCart(artObject)"><i class="fa fa-cart-plus fa-2x"></i>&nbsp;|&nbsp; Add to cart</button>
       </div>
-      Total: {{cart.total}}
-      <button ui-sref="paypal()">Checkout</button>
+      <div class='btn-row-two'>
+        <h1 class='cart-total' style="color:white;">Total: {{cart.total}}</h1>
+        <button ui-sref="paypal()"><i class="fa fa-credit-card fa-2x"></i>&nbsp;|&nbsp; Checkout</button>
+      </div>
     </div>
   </div>
+</div>

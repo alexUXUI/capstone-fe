@@ -7,25 +7,28 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  height: 60%; }
 
 .your-cart {
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
+  padding-top: 0px;
   align-items: center;
   background-color: #ccc;
   width: 30%; }
 
 .cart-wrapper {
-  background-color: white;
+  background-color: #424242;
+  color: white;
   margin-top: 20px;
   height: 500px;
-  width: 100%; }
-
-.add-to-cart {
-  border: none;
-  background-color: white; }
+  width: 25vw;
+  -webkit-box-shadow: 0px 0px 95px -29px black;
+  -moz-box-shadow: 0px 0px 95px -29px black;
+  box-shadow: 0px 0px 95px -29px black;
+  display: flex;
+  flex-direction: column; }
 
 .post-text-shop {
   height: 100px;
@@ -48,5 +51,59 @@
   height: 40%;
   width: 40%;
   background-color: #fefefe; }
+
+.checkout-btns {
+  bottom: 0;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+  background-color: #424242;
+  -webkit-box-shadow: 0px 0px 95px -29px black;
+  -moz-box-shadow: 0px 0px 95px -29px black;
+  box-shadow: 0px 0px 95px -29px black; }
+
+.btn-row-one {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .btn-row-one .add-to-cart {
+    border: none;
+    background-color: white;
+    width: 35%;
+    height: 70px;
+    transition: .45s background-color; }
+  .btn-row-one .add-to-cart:hover {
+    background-color: cornflowerblue; }
+  .btn-row-one input {
+    height: 70px;
+    width: 45%;
+    font-size: 1.5em;
+    text-align: center; }
+
+.btn-row-two {
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .btn-row-two .cart-total {
+    width: 45%;
+    background-color: #363636;
+    font-size: 2.25em; }
+  .btn-row-two button {
+    width: 35%;
+    height: 70px;
+    transition: .45s background-color;
+    border: none; }
+  .btn-row-two button:hover {
+    background-color: #19E898; }
+
+.content-page-hashtags {
+  height: 100%; }
 
 /*# sourceMappingURL=shoppingcart.css.map */

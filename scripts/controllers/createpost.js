@@ -1,5 +1,4 @@
 app.controller('CreatePostController', function($scope, $http, $state, $localStorage){
-  console.log('hello from create a post');
   // $scope.postData = {}
   // $scope.postData.title = 'whatev';
   // $scope.postData.text = 'whatev';
@@ -11,7 +10,6 @@ app.controller('CreatePostController', function($scope, $http, $state, $localSto
   // $scope.postData.comments = ['hey', 'its', 'cool'];
   $scope.submitData = function(){
     $http.post('https://rebelmarkets.herokuapp.com/submitpost', $scope.postData).then(function(data){
-      console.log(data.data);
       $state.go('content', data.data);
     }).catch(function(err){
       console.log('error posting', err);
