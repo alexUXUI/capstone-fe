@@ -28,7 +28,6 @@
   box-shadow: inset 0px 0px 95px -29px #424242;
 }
 //////// search
-//
 .search-form {
   z-index: 1000;
   display: flex;
@@ -206,8 +205,7 @@ hr {
   padding-right: 15%;
   font-size: 1.5em;
   font-weight: lighter;
-  // font-family: 'Strait', sans-serif;
-  font-family: 'Ruda', sans-serif;
+   font-family: 'Ruda', sans-serif;
 }
 
 .post-text::first-letter {
