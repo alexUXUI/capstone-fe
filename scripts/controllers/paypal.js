@@ -6,13 +6,13 @@
       })
     }
 
-    $scope.creaditCardNumber = 5597670493752255;
-    $scope.firstName = 'Alex';
-    $scope.lastName = 'Bennett';
+    $scope.creaditCardNumber = xxxxxxxxxx;
+    $scope.firstName = 'John';
+    $scope.lastName = 'Doe';
     $scope.currency = 'USD';
     $scope.expireYear = 2018;
     $scope.exireMonth = 02;
-    $scope.cvv = 845;
+    $scope.cvv = xxx;
     $scope.cardType = "Mastercard";
 
   })
